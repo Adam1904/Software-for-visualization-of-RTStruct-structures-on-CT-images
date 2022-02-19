@@ -2,6 +2,8 @@
 
 Project made for the course - Information Technology Systems in Medicine
 
+![visualization of RTStruct structures on CT images](https://github.com/Adam1904/Software-for-visualization-of-RTStruct-structures-on-CT-images/blob/main/gui.png)
+
 ## Design
 
 This script is responsible for the operation of the program, it is responsible for both creating the GUI and the 
@@ -38,3 +40,23 @@ This script requires following libraries to be installed:
     structures for manipulation, save the modified datasets as DICOM format files
 - os - a Python module which provides a portable way of using operating system dependent functionality, it comes under
      Python's standard utility modules
+## Prerequisites
+
+```sh
+> pip install numpy
+> pip install pydicom
+> pip install opencv-python
+> pip install matplotlib
+> pip install dicom-csv
+```
+
+## Execution
+To run the code, type:
+
+```
+python3 app.py
+```
+
+## Things to improve in the future
+
+- more precise centering of RTStruct structures
