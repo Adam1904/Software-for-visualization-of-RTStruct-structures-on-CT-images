@@ -1,6 +1,6 @@
 # RTStruct Visualization Software - academic project
 
-![image](app.png)
+![video](app.gif)
 
 ## Features
 
@@ -46,6 +46,8 @@ To run the code, type:
 ```sh
 > python app.py
 ```
+
+![image](app.png)
 
 ## Documentation
 
