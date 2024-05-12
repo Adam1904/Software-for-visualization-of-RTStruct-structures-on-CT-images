@@ -1,6 +1,8 @@
 # RTStruct Visualization Software - academic project
 
-![video](app.gif)
+<p align="center">
+  <img src="app.gif" alt="video" width="400" alt="fall_example">
+</p>
 
 ## Features
 
@@ -46,8 +48,9 @@ To run the code, type:
 ```sh
 > python app.py
 ```
-
-![image](app.png)
+<p align="center">
+  <img src="app.png" alt="image" width="400" alt="fall_example">
+</p>
 
 ## Documentation
 
