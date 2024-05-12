@@ -1,6 +1,4 @@
-# RTStruct Visualization Software
-
-Project made for the course - Programming languages for biomedical applications
+# RTStruct Visualization Software - academic project
 
 ![image](app.png)
 
@@ -15,6 +13,14 @@ Project made for the course - Programming languages for biomedical applications
 - **Export Functionality**: Export displayed results to graphic files in various formats.
 
 ## Getting Started
+
+### Dependencies
+
+Build environment has Python 3.8.19 with conda
+
+```bash
+conda create -n "myenv" python=3.8.19
+```
 
 ### Prerequisites
 
