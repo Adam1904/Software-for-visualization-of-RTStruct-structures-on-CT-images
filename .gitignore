@@ -1,0 +1,7 @@
+__pycache__/
+.vscode/
+__pycache__/
+images_converted/
+env/
+rtstruct/
+data/*

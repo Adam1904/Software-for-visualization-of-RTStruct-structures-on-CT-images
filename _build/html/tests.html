@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>tests &#8212; Rt Struct Ct  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="utils" href="utils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-tests">
+<span id="tests"></span><h1>tests<a class="headerlink" href="#module-tests" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.</span></span><span class="sig-name descname"><span class="pre">RtSrtuctTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test cases for the RtStruct class.</p>
+<p>This class provides unit tests for the RtStruct class, which represents a radiotherapy structure.
+The tests ensure that the class functions as expected and handles various scenarios correctly.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>unittest (type): The base class for all test cases. Inherits farom <cite>unittest.TestCase</cite>.</p>
+</dd>
+<dt>Attributes:</dt><dd><p>None</p>
+</dd>
+<dt>Methods:</dt><dd><p>test_if_images(self): Test if the RtStruct contains valid images.
+test_if_pixel_spacing(self): Test if the RtStruct contains valid pixel spacing information.
+test_if_patient_position(self): Test if the RtStruct contains valid patient position information.
+test_if_contrast_enhancement(self): Test if contrast enhancement improves the image quality.
+test_if_get_number_of_slices_data_dicom(self): Test if the provided DICOM data contains multiple slices.
+test_if_rt_struct_structure_file(self): Test if a specific structure exists in the provided RT-STRUCT file.
+test_if_parse_rt_struct(self): Test if the provided RT-STRUCT file can be successfully parsed.
+test_if_loaded_rt_struct(self): Test if an RT-STRUCT file has been successfully loaded.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_contrast_enhancement">
+<span class="sig-name descname"><span class="pre">test_if_contrast_enhancement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_contrast_enhancement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if contrast enhancement improves the image quality.</p>
+<p>This function takes an image as input and performs a contrast enhancement
+algorithm. It then compares the enhanced image with the original image using
+appropriate metrics to determine if the contrast enhancement improves the
+image quality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_get_number_of_slices_data_dicom">
+<span class="sig-name descname"><span class="pre">test_if_get_number_of_slices_data_dicom</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_get_number_of_slices_data_dicom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the provided DICOM data contains multiple slices.</p>
+<p>This function takes DICOM data as input and checks if it contains multiple
+slices. It analyzes the DICOM metadata to determine the number of slices
+present in the data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_images">
+<span class="sig-name descname"><span class="pre">test_if_images</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the RtStruct contains valid images.</p>
+<p>This test case verifies that the RtStruct object contains valid images by checking
+if the image data is present and in the correct format. It ensures that the images
+are properly loaded and accessible within the RtStruct instance.</p>
+<ol class="arabic simple">
+<li><p>Create an instance of the RtStruct class.</p></li>
+<li><p>Load the images into the RtStruct object.</p></li>
+<li><p>Check if the images are successfully loaded.</p></li>
+<li><p>Assert that the loaded images are valid.</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_loaded_rt_struct">
+<span class="sig-name descname"><span class="pre">test_if_loaded_rt_struct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_loaded_rt_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if an RT-STRUCT file has been successfully loaded.</p>
+<p>This method takes an RT-STRUCT file as input and checks if it has been
+successfully loaded and parsed. It verifies if the provided RT-STRUCT
+file object contains the necessary information for further processing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_parse_rt_struct">
+<span class="sig-name descname"><span class="pre">test_if_parse_rt_struct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_parse_rt_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the provided RT-STRUCT file can be successfully parsed.</p>
+<p>This function takes an RT-STRUCT file as input and checks if it can be
+parsed correctly. It attempts to parse the RT-STRUCT file using a DICOM
+parsing library and verifies if the parsing is successful.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_patient_position">
+<span class="sig-name descname"><span class="pre">test_if_patient_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_patient_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the RtStruct contains valid patient position information.</p>
+<p>This test case verifies that the RtStruct object contains valid patient
+position information by checking if the patient position value is present
+and has the correct format. It ensures that the patient position is properly
+stored and accessible within the RtStruct instance.</p>
+<ol class="arabic simple">
+<li><p>Create an instance of the RtStruct class.</p></li>
+<li><p>Load the patient position information into the RtStruct object.</p></li>
+<li><p>Check if the patient position value is successfully loaded.</p></li>
+<li><p>Assert that the loaded patient position information is valid.</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_pixel_spacing">
+<span class="sig-name descname"><span class="pre">test_if_pixel_spacing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_pixel_spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the RtStruct contains valid pixel spacing information.</p>
+<p>This test case verifies that the RtStruct object contains valid pixel spacing
+information by checking if the pixel spacing values are present and have the
+correct format. It ensures that the pixel spacing is properly stored and
+accessible within the RtStruct instance.</p>
+<ol class="arabic simple">
+<li><p>Create an instance of the RtStruct class.</p></li>
+<li><p>Load the pixel spacing information into the RtStruct object.</p></li>
+<li><p>Check if the pixel spacing values are successfully loaded.</p></li>
+<li><p>Assert that the loaded pixel spacing information is valid.</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.RtSrtuctTests.test_if_rt_struct_structure_file">
+<span class="sig-name descname"><span class="pre">test_if_rt_struct_structure_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.RtSrtuctTests.test_if_rt_struct_structure_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a specific structure exists in the provided RT-STRUCT file.</p>
+<p>This method takes an RT-STRUCT file and a structure name as input, and
+checks if the specified structure exists in the file. It searches for
+the structure within the RT-STRUCT file’s structure set and returns True
+if found, or False otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Rt Struct Ct</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="app.html">app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">gui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tests.RtSrtuctTests"><code class="docutils literal notranslate"><span class="pre">RtSrtuctTests</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="utils.html" title="previous chapter">utils</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Piszczek.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
